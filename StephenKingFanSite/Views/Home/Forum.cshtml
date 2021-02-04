@@ -1,0 +1,42 @@
+﻿@model List<ForumPost>
+@{
+    ViewData["TITLE"] = "Forum Page";
+}
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center head-link"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="ForumPost">Post to Forum</a></h1><br />
+</div>
+
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="PostTopic" class="control-label col-md-1">Post Topic</label>
+        <input name="PostTopic" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <label for="Date" class="control-label col-md-1">Date</label>
+        <input name="Date" class="form-control col-md-6" />
+    </div>
+    <div>
+        <button type="submit" class="form-control btm btn-success col-2 ml-5">Submit</button>
+        <a asp-action="ForumPost" class="btn btn-secondary col-2 ml-5">Reset</a>
+    </div>
+</form>
+
+<div>
+    <h2>Discussion Forum</h2>
+    @foreach (ForumPost post in Model)
+    {
+        <p>
+            Post Topic:
+            @post.Topic;
+            Post:
+            @post.Comments;
+            User Name:
+            @post.Name;
+            Date:
+            @post.Date;
+        </p>
+    }
+</div>
+
+
