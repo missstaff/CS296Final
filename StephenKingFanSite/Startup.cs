@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -8,10 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StephenKingFanSite.Models;
 using StephenKingFanSite.Repos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace StephenKingFanSite
 {
@@ -29,6 +24,8 @@ namespace StephenKingFanSite
         {
             services.AddControllersWithViews();
             services.AddTransient<IForums, ForumsRepository>();
+            services.AddTransient<IMovieRepo, MovieRepo>();
+            services.AddTransient<INovelRepo, NovelRepo>();
             services.AddDbContext<ForumContext>(options =>
             options.UseSqlServer(Configuration["ConnectionStrings:ConnectionString"]));
 

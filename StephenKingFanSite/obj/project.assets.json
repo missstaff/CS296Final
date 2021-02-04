@@ -6336,11 +6336,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\misss\\source\\repos\\StephenKingFanSite\\StephenKingFanSite\\StephenKingFanSite.csproj",
+      "projectUniqueName": "F:\\School\\CS296\\CS296Final\\StephenKingFanSite\\StephenKingFanSite.csproj",
       "projectName": "StephenKingFanSite",
-      "projectPath": "C:\\Users\\misss\\source\\repos\\StephenKingFanSite\\StephenKingFanSite\\StephenKingFanSite.csproj",
+      "projectPath": "F:\\School\\CS296\\CS296Final\\StephenKingFanSite\\StephenKingFanSite.csproj",
       "packagesPath": "C:\\Users\\misss\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\misss\\source\\repos\\StephenKingFanSite\\StephenKingFanSite\\obj\\",
+      "outputPath": "F:\\School\\CS296\\CS296Final\\StephenKingFanSite\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

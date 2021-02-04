@@ -43,15 +43,10 @@ namespace StephenKingFanSite.Models
             context.SaveChanges();
 
             var forums = new ForumPost[]
-  {
+            {     
             new ForumPost{Topic="Rose Red",Comments="I loved this movie!",Name=shawnaStaff,Date=DateTime.Parse("2020-11-10")},
             new ForumPost{Topic="1408",Comments="This movie was a trip",Name=ivyStaff,Date=DateTime.Parse("2020-11-10")}
-  };
-            foreach (ForumPost f in forums)
-            {
-                context.ForumPosts.Add(f);
-            }
-            context.SaveChanges();
+            };
             foreach (ForumPost f in forums)
             {
                 context.ForumPosts.Add(f);
@@ -59,13 +54,13 @@ namespace StephenKingFanSite.Models
             context.SaveChanges();
 
             var movies = new Movie[]
-          {
+            {
             new Movie{Title="1408",Director="Mikael Håfström",PremiereDate=DateTime.Parse("2007-06-02"),Genre="S",Rating=5},
             new Movie{Title="Cat's Eye",Director="Lewis Teague",PremiereDate=DateTime.Parse("1985-04-12"),Genre="H",Rating=5},
             new Movie{Title="Cell",Director="Tod Williams",PremiereDate=DateTime.Parse("2016-05-19"),Genre="S",Rating=5},
             new Movie{Title="Creep Show",Director="George A. Romero",PremiereDate=DateTime.Parse("1982-11-12"),Genre="H",Rating=5},
             new Movie{Title="Pet Cematary",Director="Mary Lambert",PremiereDate=DateTime.Parse("1989-04-21"),Genre="H",Rating=5}
-          };
+            };
             foreach (Movie m in movies)
             {
                 context.Movies.Add(m);

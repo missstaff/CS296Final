@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Hf6Nw6CrFO66zUKIaStu8ZEW3yOg5I/6eW/id0G0dr9OWDoJ6JbRgC845e6t7/FCzWIKKpc0c8FIMt1SfvbCA==",
+  "dgSpecHash": "hvhkQF6+W74VXIxNgF/1K/ww5+jlDizaIL+r3r4dvW6FwSQIAdQva/8Nr8yea47ssc8PKRht4SloMCOnvZZeiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\misss\\source\\repos\\StephenKingFanSite\\StephenKingFanSite\\StephenKingFanSite.csproj",
+  "projectFilePath": "F:\\School\\CS296\\CS296Final\\StephenKingFanSite\\StephenKingFanSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\misss\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\misss\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.2\\microsoft.aspnetcore.cryptography.internal.5.0.2.nupkg.sha512",
