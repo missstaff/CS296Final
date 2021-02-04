@@ -1,0 +1,108 @@
+﻿@model TriviaMV
+@{
+    ViewData["Title"] = "Trivia Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Stephen King</h1>
+    <h2>King of Horror</h2>
+</div>
+
+<h2 class="text-center">Trivia</h2>
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-3 img_div">
+            <img src="~/images/80bc17470c1cf15c74b6650ae5a47c5b.jpg" class="mt-5 mb-3 ml-2 p-1" width="225" height="300" />
+            <a class="nav-link text-center" style="color:blue;" asp-area="" asp-controller="Novels" asp-action="Index">My Novels</a>
+            <img src="~/images/skfanart.jpg" class="mt-5 mb-3 ml-3 p-1" width="225" height="300" />
+            <img src="~/images/mauro-misiewicz-mauromisiewicz-king-01.jpg" class="mt-5 mb-3 ml-3 p-1" width="225" height="300" />
+        </div>
+        <div class="col-6 p-5">
+            <main>
+                <form method="post" class="container">
+                    <p class="row">What year was King born?</p>
+                    <div class="row">
+                        <input asp-for="UserAnswer1" type="number" class="form-control col-4 ml-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong1<p>
+
+                    <p class="row">What was Stephen King's first book?</p>
+                    <div class="row">
+                        <input asp-for="UserAnswer2" type="text" class="form-control col-4 ml-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong2<p>
+
+                    <p class="row">How many book's has Stephen King written?</p>
+                    <div class="row">
+                        <input asp-for="UserAnswer3" type="number" class="form-control col-4 ml-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong3<p>
+
+                    <p class="row">How many short stories has King written?</p>
+                    <div class="row">
+                        <input asp-for="UserAnswer4" type="number" class="form-control col-4 ml-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong4<p>
+
+                    <p class="row">What was Stephen King's pen name?</p>
+                    <div class="row">
+                        <label for="Richard Bachman" class="col-4">Richard Bachman</label>
+                        <input asp-for="UserAnswer5" id="Richard Bachman" value="Richard Bachman" type="radio" class="form-control col-4 mb-2" />
+                    </div>
+                    <div class="row">
+                        <label for="Clive Barker" class="col-4">Clive Barker</label>
+                        <input asp-for="UserAnswer5" id="Clive Barker" value="Clive Barker" type="radio" class="form-control col-4 mb-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong5<p>
+
+                    <p class="row">How many of King books have been adapted into movies?</p>
+                    <div class="row">
+                        <input asp-for="UserAnswer6" type="number" class="form-control col-4 ml-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong6<p>
+
+                    <p class="row">What state was Stephen King born in?</p>
+                    <div class="row">
+                        <input asp-for="UserAnswer7" type="text" class="form-control col-4 ml-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong7<p>
+
+                    <p class="row">What is King's favorite food?</p>
+                    <div class="row">
+                        <input asp-for="UserAnswer8" type="text" class="form-control col-4 ml-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong8<p>
+
+                    <p class="row">Stephen King owns 3 radio stations?</p>
+                    <div class="row">
+                        <label for="True" class="col-4">True</label>
+                        <input asp-for="UserAnswer9" id="True" value="True" type="radio" class="form-control col-4 mb-2" />
+                    </div>
+                    <div class="row">
+                        <label for="False" class="col-4">False</label>
+                        <input asp-for="UserAnswer9" id="False" value="False" type="radio" class="form-control col-4 mb-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong9<p>
+
+                    <p class="row">What is Mrs. King's first name?</p>
+                    <div class="row">
+                        <input asp-for="UserAnswer10" type="text" class="form-control col-4 ml-2" />
+                    </div>
+                    <p class="font-weight-bold">@Model?.RightOrWrong10<p>
+                        <br />
+                        <div class="row justify-content-center ml-1">
+                            <button class="btn btn-primary p-2" type="submit" value="submit">Submit</button>
+                        </div>
+                </form>
+            </main>
+        </div>
+        <div class="col-3 img_div">
+            <img src="~/images/PSTRAIN_KING_WEB_1200.jpg" class="mt-5 mb-3 ml-3 p-1" width="225" height="300" />
+            <a class="nav-link text-center" style="color:blue;" asp-area="" asp-controller="Movies" asp-action="Index">My Movies</a>
+            <img src="~/images/6eb9cf43621533.57f6278894fd5.png" class="mt-5 mb-3 ml-3 p-1" width="225" height="300" />
+            <img src="~/images/9781682616062.png" class="mt-5 mb-3 ml-3 p-1" width="225" height="300" />
+        </div>
+    </div>
+</div>
