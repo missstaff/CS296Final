@@ -237,3 +237,4 @@ F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKin
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.dll
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.pdb
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.genruntimeconfig.cache
+F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.csprojAssemblyReference.cache

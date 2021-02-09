@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using StephenKingFanSite.Models;
 using StephenKingFanSite.Repos;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
@@ -28,13 +29,6 @@ namespace StephenKingFanSite.Controllers
         public IActionResult About()
         {
             return View();
-        }
-
-        [Authorize]
-        public IActionResult Forum()
-        {
-            var posts = repo.Posts.ToList<ForumPost>();
-            return View(posts);
         }
 
         public IActionResult ForumPost()
@@ -63,13 +57,44 @@ namespace StephenKingFanSite.Controllers
         }
 
 
+        [Authorize]
+        public IActionResult Forum()
+        {
+            var posts = repo.Posts.ToList<ForumPost>();
+            return View(posts);
+        }
+
+        [HttpPost]
+        public IActionResult Forum(string topic, string date)
+        {
+            List<ForumPost> posts = null;
+            if (topic != null)
+            {
+                posts = (from f in repo.Posts
+                         where f.Topic == topic
+                         select f).ToList();
+            }
+            else if (date != null)
+            {
+                DateTime d;
+                DateTime.TryParse(date, out d);
+                posts = (from f in repo.Posts
+                         where f.Date.Month == d.Month &&
+                         f.Date.Day == d.Day &&
+                         f.Date.Year == d.Year
+                         select f).ToList();
+            }
+
+            return View(posts);
+        }
+
         public IActionResult Trivia()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Trivia(TriviaMV quiz)
+        public IActionResult Trivia(TriviaQuizVM quiz)
         {
             quiz.CheckAnswers();
             return View(quiz);

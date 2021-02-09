@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StephenKingFanSite.Models;
 using StephenKingFanSite.Repos;
@@ -88,6 +89,7 @@ namespace StephenKingFanSite.Controllers
 
 
         // GET: Movies/Details/5
+        
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -104,6 +106,7 @@ namespace StephenKingFanSite.Controllers
         }
 
         // GET: Movies/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -126,6 +129,7 @@ namespace StephenKingFanSite.Controllers
         }
 
         // GET: Movies/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -176,6 +180,7 @@ namespace StephenKingFanSite.Controllers
         }
 
         // GET: Movies/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

@@ -3,38 +3,47 @@
     ViewData["TITLE"] = "Forum Page";
 }
 
-<div class="jumbotron">
-    <h1 class="display-4 text-center head-link"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="ForumPost">Post to Forum</a></h1><br />
+<div class="text-center">
+    <h1 class="display-4">Stephen King</h1>
+    <h2>King of Horror</h2>
+    <h2>Forum</h2>
 </div>
+<br />
+
 
 <form method="post" class="container">
     <div class="row p-2">
-        <label for="PostTopic" class="control-label col-md-1">Post Topic</label>
-        <input name="PostTopic" class="form-control col-md-6" />
+        <strong><label for="Topic" class="control-label col-md-1">Topic</label></strong>
+        <input name="Topic" class="form-control col-md-6" />
     </div>
     <div class="row p-2">
-        <label for="Date" class="control-label col-md-1">Date</label>
+        <strong><label for="Date" class="control-label col-md-1">Date</label></strong>
         <input name="Date" class="form-control col-md-6" />
     </div>
-    <div>
-        <button type="submit" class="form-control btm btn-success col-2 ml-5">Submit</button>
-        <a asp-action="ForumPost" class="btn btn-secondary col-2 ml-5">Reset</a>
+    <div class="row p-2 ml-5">
+        <button type="submit" class="form-control btm btn-danger col-3 ml-0 mr-3">Submit</button>
+        <a asp-action="Forum" class="btn btn-secondary col-3 ml-3 mr-0">Reset</a>
     </div>
 </form>
+<br />
+<br />
+
+<h6><a class="nav-link" asp-area="" asp-controller="Home" asp-action="ForumPost">Add a Post</a></h6>
+<br />
 
 <div>
     <h2>Discussion Forum</h2>
     @foreach (ForumPost post in Model)
     {
         <p>
-            Post Topic:
-            @post.Topic;
-            Post:
-            @post.Comments;
-            User Name:
-            @post.Name;
-            Date:
-            @post.Date;
+            <strong>Topic</strong><br />
+            @post.Topic<br />
+            <strong>Post</strong><br />
+            @post.Comments<br />
+            <strong>User Name</strong><br />
+            @post.Name<br />
+            <strong>Date</strong>
+            @post.Date
         </p>
     }
 </div>
