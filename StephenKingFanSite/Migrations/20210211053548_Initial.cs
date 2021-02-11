@@ -224,6 +224,34 @@ namespace StephenKingFanSite.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Replies",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CommenterId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    ReplyText = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ForumPostID = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Replies", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Replies_AspNetUsers_CommenterId",
+                        column: x => x.CommenterId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Replies_ForumPosts_ForumPostID",
+                        column: x => x.ForumPostID,
+                        principalTable: "ForumPosts",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -267,6 +295,16 @@ namespace StephenKingFanSite.Migrations
                 name: "IX_ForumPosts_NameId",
                 table: "ForumPosts",
                 column: "NameId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Replies_CommenterId",
+                table: "Replies",
+                column: "CommenterId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Replies_ForumPostID",
+                table: "Replies",
+                column: "ForumPostID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -287,9 +325,6 @@ namespace StephenKingFanSite.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "ForumPosts");
-
-            migrationBuilder.DropTable(
                 name: "Genres");
 
             migrationBuilder.DropTable(
@@ -299,7 +334,13 @@ namespace StephenKingFanSite.Migrations
                 name: "Novels");
 
             migrationBuilder.DropTable(
+                name: "Replies");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "ForumPosts");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

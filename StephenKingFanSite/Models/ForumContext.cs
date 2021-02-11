@@ -15,5 +15,7 @@ namespace StephenKingFanSite.Models
 
         public DbSet<Genre> Genres { get; set; }
 
+        public DbSet<Reply> Replies { get; set; }
+
     }
 }

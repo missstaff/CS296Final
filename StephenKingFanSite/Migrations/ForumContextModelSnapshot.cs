@@ -331,6 +331,35 @@ namespace StephenKingFanSite.Migrations
                     b.ToTable("Novels");
                 });
 
+            modelBuilder.Entity("StephenKingFanSite.Models.Reply", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("CommenterId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("ForumPostID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReplyText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CommenterId");
+
+                    b.HasIndex("ForumPostID");
+
+                    b.ToTable("Replies");
+                });
+
             modelBuilder.Entity("StephenKingFanSite.Models.AppUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
@@ -401,6 +430,24 @@ namespace StephenKingFanSite.Migrations
                         .HasForeignKey("NameId");
 
                     b.Navigation("Name");
+                });
+
+            modelBuilder.Entity("StephenKingFanSite.Models.Reply", b =>
+                {
+                    b.HasOne("StephenKingFanSite.Models.AppUser", "Commenter")
+                        .WithMany()
+                        .HasForeignKey("CommenterId");
+
+                    b.HasOne("StephenKingFanSite.Models.ForumPost", null)
+                        .WithMany("Replies")
+                        .HasForeignKey("ForumPostID");
+
+                    b.Navigation("Commenter");
+                });
+
+            modelBuilder.Entity("StephenKingFanSite.Models.ForumPost", b =>
+                {
+                    b.Navigation("Replies");
                 });
 #pragma warning restore 612, 618
         }

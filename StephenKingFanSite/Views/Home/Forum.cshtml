@@ -17,8 +17,8 @@
         <input name="Topic" class="form-control col-md-6" />
     </div>
     <div class="row p-2">
-        <strong><label for="Date" class="control-label col-md-1">Date</label></strong>
-        <input name="Date" class="form-control col-md-6" />
+        <strong><label for="Name" class="control-label col-md-1">Name</label></strong>
+        <input name="Name" class="form-control col-md-6" />
     </div>
     <div class="row p-2 ml-5">
         <button type="submit" class="form-control btm btn-danger col-3 ml-0 mr-3">Submit</button>
@@ -45,7 +45,27 @@
             <strong>Date</strong>
             @post.Date
         </p>
+
+        @if (post.Replies.Count != 0)
+        {
+            <h3>Comments</h3>
+
+            @foreach (Reply reply in post.Replies)
+            {
+                <p>
+                    <strong class="m-3">Comment:</strong>
+                    @reply.ReplyText<br />
+                    <strong class="m-3">By:</strong>
+                    @reply.Commenter.Name<br />
+                    <strong class="m-3">Date:</strong>
+                    @reply.Date<br />
+                </p>
+            }
+        }
+        <a asp-action="Reply" asp-route-postId="@post.ID" class="btn btn-secondary col-3">Add Comment</a>
+
     }
+    
 </div>
 
 

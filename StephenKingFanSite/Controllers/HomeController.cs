@@ -65,7 +65,7 @@ namespace StephenKingFanSite.Controllers
         }
 
         [HttpPost]
-        public IActionResult Forum(string topic, string date)
+        public IActionResult Forum(string topic, string name)
         {
             List<ForumPost> posts = null;
             if (topic != null)
@@ -74,19 +74,41 @@ namespace StephenKingFanSite.Controllers
                          where f.Topic == topic
                          select f).ToList();
             }
-            else if (date != null)
+            else if (name != null)
             {
-                DateTime d;
-                DateTime.TryParse(date, out d);
                 posts = (from f in repo.Posts
-                         where f.Date.Month == d.Month &&
-                         f.Date.Day == d.Day &&
-                         f.Date.Year == d.Year
+                         where f.Name.UserName == name
                          select f).ToList();
             }
 
             return View(posts);
         }
+
+        [Authorize]
+        public IActionResult Reply(int id)
+        {
+            var replyVM = new ReplyVM { ID = id };
+            return View(replyVM);
+        }
+
+        /*[HttpPost]
+        public RedirectToActionResult Reply(ReplyVM replyVM)
+        {
+            var reply = new Reply { ReplyText = replyVM.ReplyText };
+            reply.Commenter = userManager.GetUserAsync(User).Result;
+
+            reply.Date = DateTime.Now;
+            //retrieve the post the comment belongs to//
+            var post = (from r in repo.Posts
+                        where r.ID == replyVM.ID
+                        select r).First<ForumPost>();
+
+            post.replies.Add(reply);
+            repo.UpdatePost(post);
+
+
+            return RedirectToAction("Forum");
+        }*/
 
         public IActionResult Trivia()
         {

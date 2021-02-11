@@ -2,7 +2,7 @@
 
 namespace StephenKingFanSite.Migrations
 {
-    public partial class Seed3 : Migration
+    public partial class Two : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

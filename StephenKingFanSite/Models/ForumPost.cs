@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace StephenKingFanSite.Models
 {
     public class ForumPost
     {
+        public List<Reply> replies = new List<Reply>();
+
+        [Key]
         public int ID { get; set; }
 
         [StringLength(60, MinimumLength = 2, ErrorMessage = "Post topic must be between 2 and 60 characters")]
@@ -19,6 +23,14 @@ namespace StephenKingFanSite.Models
        
         [Required]
         public DateTime Date { get; set; }
-      
+
+        public List<Reply> Replies
+        {
+            get
+            {
+                return replies;
+            }
+        }
+
     }
 }

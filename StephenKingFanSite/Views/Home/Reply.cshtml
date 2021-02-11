@@ -1,0 +1,24 @@
+﻿@model ReplyVM
+@{
+    ViewData["TITLE"] = "Comment";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Stephen King</h1>
+    <h2>King of Horror</h2>
+</div>
+<br />
+<strong>Enter Your Reply</strong>
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+        <div class="row">
+            <label class="control-label col-sm-3 ml-5 pb-3" asp-for="ReplyText">Reply</label><br />
+            <input class="form-control col-sm-6 pb-3" asp-for="ReplyText" placeholder="Enter you reply..." /><br />
+        </div>
+
+        <div class="row justify-content-center ml-5">
+            <button class="btn btn-primary p-2" type="submit" value="submit">Submit</button>
+        </div>
+    </form>
+</div>
