@@ -87,11 +87,11 @@ namespace StephenKingFanSite.Controllers
         [Authorize]
         public IActionResult Reply(int id)
         {
-            var replyVM = new ReplyVM { ID = id };
+            var replyVM = new ReplyVM { PostID = id };
             return View(replyVM);
         }
 
-        /*[HttpPost]
+        [HttpPost]
         public RedirectToActionResult Reply(ReplyVM replyVM)
         {
             var reply = new Reply { ReplyText = replyVM.ReplyText };
@@ -100,7 +100,7 @@ namespace StephenKingFanSite.Controllers
             reply.Date = DateTime.Now;
             //retrieve the post the comment belongs to//
             var post = (from r in repo.Posts
-                        where r.ID == replyVM.ID
+                        where r.PostID == replyVM.PostID
                         select r).First<ForumPost>();
 
             post.replies.Add(reply);
@@ -108,7 +108,7 @@ namespace StephenKingFanSite.Controllers
 
 
             return RedirectToAction("Forum");
-        }*/
+        }
 
         public IActionResult Trivia()
         {

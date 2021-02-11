@@ -9,7 +9,7 @@ namespace StephenKingFanSite.Models
     public class Reply
     {
         [Key]
-        public int ID { get; set; }
+        public int ReplyID { get; set; }
 
         public AppUser Commenter { get; set; }
 

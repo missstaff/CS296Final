@@ -212,6 +212,7 @@ F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\View
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Forum.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\ForumPost.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Reply.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Trivia.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Create.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Delete.cshtml.g.cs
@@ -238,4 +239,3 @@ F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKin
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.pdb
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.genruntimeconfig.cache
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.csprojAssemblyReference.cache
-F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Reply.cshtml.g.cs

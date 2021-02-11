@@ -4,8 +4,7 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Stephen King</h1>
-    <h2>King of Horror</h2>
+    <h1 class="display-4 font-weight-bold">King of Horror</h1>
     <h2>Forum</h2>
 </div>
 <br />
@@ -48,7 +47,7 @@
 
         @if (post.Replies.Count != 0)
         {
-            <h3>Comments</h3>
+            <h3>Replies</h3>
 
             @foreach (Reply reply in post.Replies)
             {
@@ -62,7 +61,7 @@
                 </p>
             }
         }
-        <a asp-action="Reply" asp-route-postId="@post.ID" class="btn btn-secondary col-3">Add Comment</a>
+        <a asp-action="Reply" asp-route-postId="@post.PostID" class="btn btn-secondary col-3">Add Reply</a>
 
     }
     

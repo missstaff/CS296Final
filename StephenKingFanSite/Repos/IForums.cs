@@ -12,5 +12,6 @@ namespace StephenKingFanSite.Repos
         public void AddPost(ForumPost forumPost);
 
         public ForumPost GetForumPostsByPostTitle(string postTitle);
+        void UpdatePost(ForumPost post);
     }
 }

@@ -9,7 +9,7 @@ namespace StephenKingFanSite.Models
         public List<Reply> replies = new List<Reply>();
 
         [Key]
-        public int ID { get; set; }
+        public int PostID { get; set; }
 
         [StringLength(60, MinimumLength = 2, ErrorMessage = "Post topic must be between 2 and 60 characters")]
         [Required]
