@@ -7,7 +7,7 @@ namespace StephenKingFanSite.Models
 {
     public class ReplyVM
     {
-        public int ID { get; set; }
+        public int PostID { get; set; }
         public string Title { get; set; }
         public string ReplyText { get; set; }
     }

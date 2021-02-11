@@ -16,7 +16,10 @@ namespace StephenKingFanSite.Repos
         {
             get
             {
-                return context.ForumPosts.Include(e => e.Name);
+                return context.ForumPosts.Include(e => e.Name)
+                        .Include(e => e.Replies)
+                        .ThenInclude(e => e.Commenter);
+                       
             }
         }
 
@@ -32,6 +35,12 @@ namespace StephenKingFanSite.Repos
         {
             var posts = context.ForumPosts.Find(postTitle);
             return posts;
+        }
+
+        public void UpdatePost(ForumPost post)
+        {
+            context.ForumPosts.Update(post);
+            context.SaveChanges();
         }
     }
 }

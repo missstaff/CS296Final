@@ -31,7 +31,7 @@
                     <td>
                         <form method="post" asp-action="Delete"
                               asp-route-id="@user.Id">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-dark">
                                 Delete User
                             </button>
                         </form>
@@ -39,7 +39,7 @@
                     <td>
                         <form method="post" asp-action="AddToAdmin"
                               asp-route-id="@user.Id">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-outline-danger">
                                 Add To Admin
                             </button>
                         </form>
@@ -47,7 +47,7 @@
                     <td>
                         <form method="post" asp-action="RemoveFromAdmin"
                               asp-route-id="@user.Id">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-danger">
                                 Remove From Admin
                             </button>
                         </form>
@@ -63,7 +63,7 @@
 @if (Model.Roles.Count() == 0)
 {
     <form method="post" asp-action="CreateAdminRole">
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-outline-danger">
             Create Admin Role
         </button>
     </form>
@@ -82,7 +82,7 @@ else
                     <td>
                         <form method="post" asp-action="DeleteRole"
                               asp-route-id="@role.Id">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-dark">
                                 Delete Role
                             </button>
                         </form>

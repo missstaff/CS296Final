@@ -13,7 +13,7 @@ namespace Shawna_Staff.Repos
 
         public void AddPost(ForumPost forumPost)
         {
-            forumPost.ID = posts.Count;
+            forumPost.PostID = posts.Count;
             posts.Add(forumPost);
         }
 
@@ -21,6 +21,11 @@ namespace Shawna_Staff.Repos
         {
             var post = posts.Find(p => p.Topic == postTitle);
             return post;
+        }
+
+        public void UpdatePost(ForumPost post)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
