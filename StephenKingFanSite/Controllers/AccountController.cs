@@ -55,6 +55,7 @@ namespace StephenKingFanSite.Controllers
         public IActionResult LogIn(string returnURL = "")
         {
             var model = new LoginVM { ReturnUrl = returnURL };
+           
             return View(model);
         }
 
