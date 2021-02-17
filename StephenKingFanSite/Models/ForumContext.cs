@@ -12,10 +12,9 @@ namespace StephenKingFanSite.Models
         public DbSet<ForumPost> ForumPosts { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Novel> Novels { get; set; }
-
         public DbSet<Genre> Genres { get; set; }
-
         public DbSet<Reply> Replies { get; set; }
+        public DbSet<Score> Scores { get; set; }
 
     }
 }
