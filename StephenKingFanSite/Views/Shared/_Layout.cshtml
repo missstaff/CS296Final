@@ -36,7 +36,15 @@
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Account"
-                                   asp-action="LogOut">Logout</a> &nbsp <span class="text-dark">@User.Identity.Name</span>
+                                   asp-action="LogOut">Logout</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Admin</a>
+                            </li>
+
+                            <li>
+                                <p class="nav-link text-dark">@User.Identity.Name</p>
                             </li>
                         }
                         else
@@ -45,12 +53,10 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="LogIn">LogIn</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="LogIn">Login</a>
                             </li>
                         }
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Admin</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
