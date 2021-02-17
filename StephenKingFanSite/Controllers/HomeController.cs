@@ -122,6 +122,11 @@ namespace StephenKingFanSite.Controllers
             return View(quiz);
 
         }
+
+        public IActionResult Scores()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
