@@ -26,6 +26,7 @@ namespace StephenKingFanSite
             services.AddTransient<IForums, ForumsRepository>();
             services.AddTransient<IMovieRepo, MovieRepo>();
             services.AddTransient<INovelRepo, NovelRepo>();
+            services.AddTransient<ITrivia, TriviaRepo>();
             services.AddDbContext<ForumContext>(options =>
             options.UseSqlServer(Configuration["ConnectionStrings:ConnectionString"]));
 

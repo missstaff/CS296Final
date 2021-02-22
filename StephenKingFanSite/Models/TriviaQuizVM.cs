@@ -6,7 +6,6 @@ namespace StephenKingFanSite.Models
     [Keyless]
     public class TriviaQuizVM
     {
-        //maybe remove "userAnswer" and can iterate?//
         public String UserAnswer1 { get; set; }
         public String RightOrWrong1 { get; set; }
         public String UserAnswer2 { get; set; }

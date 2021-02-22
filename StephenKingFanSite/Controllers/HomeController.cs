@@ -110,23 +110,6 @@ namespace StephenKingFanSite.Controllers
             return RedirectToAction("Forum");
         }
 
-        public IActionResult Trivia()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Trivia(TriviaQuizVM quiz)
-        {
-            quiz.CheckAnswers();
-            return View(quiz);
-
-        }
-
-        public IActionResult Scores()
-        {
-            return View();
-        }
         public IActionResult Privacy()
         {
             return View();

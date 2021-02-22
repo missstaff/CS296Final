@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StephenKingFanSite.Models
 {
-    public class Score
+    public class Scores
     {
         [Key]
         public int scoresID { get; set; }
@@ -14,6 +14,8 @@ namespace StephenKingFanSite.Models
         public AppUser Username { get; set; }
 
         public string Ranking { get; set; }
+
+        public int Score { get; set; }
 
         public DateTime Date { get; set; }
 

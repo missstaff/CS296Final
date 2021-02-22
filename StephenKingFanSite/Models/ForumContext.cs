@@ -14,7 +14,7 @@ namespace StephenKingFanSite.Models
         public DbSet<Novel> Novels { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Reply> Replies { get; set; }
-        public DbSet<Score> Scores { get; set; }
+        public DbSet<Scores> Scores { get; set; }
 
     }
 }
