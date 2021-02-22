@@ -28,12 +28,14 @@ namespace StephenKingFanSite.Controllers
         {
             quiz.CheckAnswers();
 
+            var score = quiz.GetScore();
+            var ranking = quiz.GetRanking(score);
             if (ModelState.IsValid)
             {
                 model.Username = userManager.GetUserAsync(User).Result;
                 model.Username = model.Username;
-                //model.Score = model.Score;
-                //model.Ranking = model.Ranking;
+                model.Score = score;
+                model.Ranking = ranking;
                 model.Date = DateTime.Now;
 
                 // Store the model in the database

@@ -160,5 +160,42 @@ namespace StephenKingFanSite.Models
             RightOrWrong49 = UserAnswer49 == "3" ? "Correct" : "Wrong";
             RightOrWrong50 = UserAnswer50 == "False" ? "Correct" : "Wrong";*/
         }
+        public int GetScore()
+        {
+            string[] array = {RightOrWrong1, RightOrWrong2, RightOrWrong3, RightOrWrong4, RightOrWrong5, RightOrWrong6, RightOrWrong7, RightOrWrong8,
+            RightOrWrong9, RightOrWrong10};
+            int score = 0;
+            foreach (var answer in array)
+            {
+                if(answer == "Correct")
+                {
+                    score += 10;
+                }
+            }
+            return score;
+        }
+
+        public string GetRanking(int score)
+        {
+            score = GetScore();
+            string ranking = "";
+            if (score > 94)
+            {
+                ranking = "Fanatic";
+            }
+            else if (score > 89)
+            {
+                ranking = "Groupie";
+            }
+            else if (score > 79)
+            {
+                ranking = "Fan Girl";
+            }
+            else
+            {
+                ranking = "Poser!";
+            }
+            return ranking;
+        }
     }
 }
