@@ -7,12 +7,43 @@
 </div>
 
 <h2 class="text-center">Scores</h2>
+<br />
 
-<table class="table table-bordered table-striped table-sm">
+<table class="table table-striped">
     <thead>
-        <tr><th>Username</th><th>Score</th><th>Ranking</th><th>Date</th></tr>
+        <tr>
+            <th>
+               Username
+            </th>
+            <th>
+               Score
+            </th>
+            <th>
+               Ranking
+            </th>
+            <th>
+                Date
+            </th>
+        </tr>
     </thead>
     <tbody>
-        </tbody>
-    </table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Username
+                </td>
+                <td>
+                    @item.Score
+                </td>
+                <td>
+                    @item.Ranking
+                </td>
+                <td>
+                    @item.Date
+            </tr>
+        }
+    </tbody>
+</table>
+
 

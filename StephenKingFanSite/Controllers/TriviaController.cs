@@ -33,7 +33,8 @@ namespace StephenKingFanSite.Controllers
             if (ModelState.IsValid)
             {
                 model.Username = userManager.GetUserAsync(User).Result;
-                model.Username = model.Username;
+                //model.Username = model.Username;
+                //can I assign "guest" to non registered user for username?
                 model.Score = score;
                 model.Ranking = ranking;
                 model.Date = DateTime.Now;
@@ -45,7 +46,7 @@ namespace StephenKingFanSite.Controllers
             return View(quiz);
 
         }
-    
+        
         public IActionResult Scores()
         {
             var scores = repo.Scores.ToList<Scores>();
