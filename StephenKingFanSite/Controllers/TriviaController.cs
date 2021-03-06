@@ -34,7 +34,16 @@ namespace StephenKingFanSite.Controllers
             {
                 model.Username = userManager.GetUserAsync(User).Result;
                 //model.Username = model.Username;
-                //can I assign "guest" to non registered user for username?
+                if(model.Username == null)
+                {
+                    AppUser Guest = new AppUser
+                    {
+                        UserName = "Guest",
+                        Name = "Guest"
+                    };
+
+                    model.Username = Guest;
+                }
                 model.Score = score;
                 model.Ranking = ranking;
                 model.Date = DateTime.Now;
