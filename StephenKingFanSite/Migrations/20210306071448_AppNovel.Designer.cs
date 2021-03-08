@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StephenKingFanSite.Models;
 
 namespace StephenKingFanSite.Migrations
 {
     [DbContext(typeof(ForumContext))]
-    partial class ForumContextModelSnapshot : ModelSnapshot
+    [Migration("20210306071448_AppNovel")]
+    partial class AppNovel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -326,12 +328,7 @@ namespace StephenKingFanSite.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("ID");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Novels");
                 });
@@ -461,15 +458,6 @@ namespace StephenKingFanSite.Migrations
                         .HasForeignKey("NameId");
 
                     b.Navigation("Name");
-                });
-
-            modelBuilder.Entity("StephenKingFanSite.Models.Novel", b =>
-                {
-                    b.HasOne("StephenKingFanSite.Models.AppUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("StephenKingFanSite.Models.Reply", b =>

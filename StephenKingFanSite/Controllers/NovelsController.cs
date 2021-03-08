@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StephenKingFanSite.Models;
@@ -12,10 +13,12 @@ namespace StephenKingFanSite.Controllers
     public class NovelsController : Controller
     {
         INovelRepo repo;
+        UserManager<AppUser> userManager;
 
-        public NovelsController(INovelRepo r)
+        public NovelsController(INovelRepo r, UserManager<AppUser> u)
         {
             repo = r;
+            userManager = u;
         }
 
         // GET: Novels
