@@ -42,6 +42,14 @@ namespace StephenKingFanSite.Models
             context.Users.Add(mikhailGuidesse);
             context.SaveChanges();
 
+            AppUser lanceStaff = new AppUser
+            {
+                UserName = "LStaff",
+                Name = "Lance Staff"
+            };
+            context.Users.Add(lanceStaff);
+            context.SaveChanges();
+
             ForumPost RoseRed1 = new ForumPost
             {
                 Topic = "Rose Red",
@@ -60,6 +68,36 @@ namespace StephenKingFanSite.Models
                 Date = DateTime.Parse("2020-11-10")
             };
             context.ForumPosts.Add(ThisMove);
+            context.SaveChanges();
+
+            ForumPost OMG = new ForumPost
+            {
+                Topic = "Pet Sematary",
+                Comments = "Scariest Movie ever",
+                Name = mikhailGuidesse,
+                Date = DateTime.Parse("2021-1-17")
+            };
+            context.ForumPosts.Add(OMG);
+            context.SaveChanges();
+
+            Scores score1 = new Scores
+            {
+                Username = lanceStaff,
+                Ranking = "Fanatic",
+                Score = 100,
+                Date = DateTime.Parse("2021-1-17")
+            };
+            context.Scores.Add(score1);
+            context.SaveChanges();
+
+            Scores score2 = new Scores
+            {
+                Username = ivyStaff,
+                Ranking = "Fan Girl",
+                Score = 80,
+                Date = DateTime.Parse("2021-3-08")
+            };
+            context.Scores.Add(score2);
             context.SaveChanges();
 
             Movie fourTeenOEight = new Movie { Title = "1408", Director = "Mikael Håfström", PremiereDate = DateTime.Parse("2007-06-02"), Genre = "S", Rating = 5 };
