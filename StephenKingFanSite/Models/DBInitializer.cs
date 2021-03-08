@@ -82,23 +82,23 @@ namespace StephenKingFanSite.Models
             context.Movies.Add(petCematary);
             context.SaveChanges();
 
-            Novel bagOfBones = new Novel { Title = "Bag Of Bones", Publisher = "Scribner", PulicationDate = DateTime.Parse("1998-09-22"), Genre = "H", Rating = 5, User = ivyStaff };
+            Novel bagOfBones = new Novel { Title = "Bag Of Bones", Publisher = "Scribner", PulicationDate = DateTime.Parse("1998-09-22"), Genre = "H", Rating = 5};
             context.Novels.Add(bagOfBones);
             context.SaveChanges();
 
-            Novel dreamCatcher = new Novel { Title = "Dream Catcher", Publisher = "Scribner", PulicationDate = DateTime.Parse("2001-02-20"), Genre = "SF", Rating = 5, User = shawnaStaff };
+            Novel dreamCatcher = new Novel { Title = "Dream Catcher", Publisher = "Scribner", PulicationDate = DateTime.Parse("2001-02-20"), Genre = "SF", Rating = 5};
             context.Novels.Add(dreamCatcher);
             context.SaveChanges();
 
-            Novel fireStarter = new Novel { Title = "Firestarter", Publisher = "Viking Press", PulicationDate = DateTime.Parse("1980-09-29"), Genre = "T", Rating = 5, User = mikhailGuidesse };
+            Novel fireStarter = new Novel { Title = "Firestarter", Publisher = "Viking Press", PulicationDate = DateTime.Parse("1980-09-29"), Genre = "T", Rating = 5};
             context.Novels.Add(fireStarter);
             context.SaveChanges();
 
-            Novel salemsLot = new Novel { Title = "Salem's Lot", Publisher = "Doubleday", PulicationDate = DateTime.Parse("1975-10-07"), Genre = "H", Rating = 5, User = ivyStaff };
+            Novel salemsLot = new Novel { Title = "Salem's Lot", Publisher = "Doubleday", PulicationDate = DateTime.Parse("1975-10-07"), Genre = "H", Rating = 5};
             context.Novels.Add(salemsLot);
             context.SaveChanges();
 
-            Novel theTommyKnockers = new Novel { Title = "The Tommy Knockers", Publisher = "G.P. Putnam's & Sons", PulicationDate = DateTime.Parse("1987-11-01"), Genre = "SF", Rating = 5, User = mikhailGuidesse };
+            Novel theTommyKnockers = new Novel { Title = "The Tommy Knockers", Publisher = "G.P. Putnam's & Sons", PulicationDate = DateTime.Parse("1987-11-01"), Genre = "SF", Rating = 5};
             context.Novels.Add(theTommyKnockers);
             context.SaveChanges();
 

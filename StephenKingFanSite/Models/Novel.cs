@@ -27,7 +27,7 @@ namespace StephenKingFanSite.Models
         [Range(1, 5, ErrorMessage = "Rating must be betweeen 1 and 5")]
         public int Rating { get; set; }
 
-        public AppUser User { get; set;}//want to display which user added a novel
+        //public AppUser User { get; set;}//need help want to display which user added a novel
 
     }
 }

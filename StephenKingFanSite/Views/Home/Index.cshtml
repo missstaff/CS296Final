@@ -9,10 +9,14 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-     <audio autoplay="autoplay" src="~/sound/johnny.wav" preload="auto"></audio>
+    <audio id="audio" autoplay="autoplay" src="~/sound/johnny.wav" preload="auto"></audio>
 }
 
 <div>
     <img src="~/images/StephenKingAdaptations_Getty_NewLineCinema_GreenEpsteinProductions_Ringer.0.jpg" />
 </div>
 
+<script>
+    this.audio = document.getElementById("audio");
+
+</script>

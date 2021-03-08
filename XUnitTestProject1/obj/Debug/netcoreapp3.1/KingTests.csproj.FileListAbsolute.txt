@@ -1,3 +1,7 @@
+F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.csprojAssemblyReference.cache
+F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.AssemblyInfoInputs.cache
+F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.AssemblyInfo.cs
+F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.csproj.CoreCompileInputs.cache
 F:\School\CS296\CS296Final\XUnitTestProject1\bin\Debug\netcoreapp3.1\testhost.dll
 F:\School\CS296\CS296Final\XUnitTestProject1\bin\Debug\netcoreapp3.1\StephenKingFanSite.Views.dll
 F:\School\CS296\CS296Final\XUnitTestProject1\bin\Debug\netcoreapp3.1\StephenKingFanSite.Views.pdb
@@ -161,10 +165,6 @@ F:\School\CS296\CS296Final\XUnitTestProject1\bin\Debug\netcoreapp3.1\runtimes\wi
 F:\School\CS296\CS296Final\XUnitTestProject1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 F:\School\CS296\CS296Final\XUnitTestProject1\bin\Debug\netcoreapp3.1\StephenKingFanSite.dll
 F:\School\CS296\CS296Final\XUnitTestProject1\bin\Debug\netcoreapp3.1\StephenKingFanSite.pdb
-F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.csprojAssemblyReference.cache
-F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.AssemblyInfoInputs.cache
-F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.AssemblyInfo.cs
-F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.csproj.CoreCompileInputs.cache
 F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.csproj.CopyComplete
 F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.dll
 F:\School\CS296\CS296Final\XUnitTestProject1\obj\Debug\netcoreapp3.1\KingTests.pdb

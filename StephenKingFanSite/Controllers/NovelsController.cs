@@ -13,12 +13,12 @@ namespace StephenKingFanSite.Controllers
     public class NovelsController : Controller
     {
         INovelRepo repo;
-        UserManager<AppUser> userManager;
+        //UserManager<AppUser> userManager;
 
-        public NovelsController(INovelRepo r, UserManager<AppUser> u)
+        public NovelsController(INovelRepo r)
         {
             repo = r;
-            userManager = u;
+            //userManager = u;
         }
 
         // GET: Novels

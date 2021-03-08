@@ -226,6 +226,8 @@ F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\View
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Trivia\Index.cshtml.g.cs
+F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Trivia\Scores.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\User\Add.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -238,5 +240,3 @@ F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKin
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.pdb
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.genruntimeconfig.cache
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\StephenKingFanSite.csprojAssemblyReference.cache
-F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Trivia\Scores.cshtml.g.cs
-F:\School\CS296\CS296Final\StephenKingFanSite\obj\Debug\netcoreapp3.1\Razor\Views\Trivia\Index.cshtml.g.cs
