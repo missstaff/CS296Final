@@ -44,8 +44,12 @@ F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\O
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.js
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.map
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt
-F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\sound\haawrh.wav
+F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\sound\394b2948-76b9-46db-ab43-f967e9d9c643.mp3
+F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\sound\89de8fae-f1e4-44c3-8bc7-dff34ebe13d1.mp3
+F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\sound\f50485fa-011a-4235-a9c2-f1f11286553b.mp3
+F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\sound\fb3a1ebb-8942-43ff-ac9a-0c71ced971c6.mp3
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\sound\johnny.wav
+F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\sound\New.wav
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\sound\red_rum.wav
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 F:\School\CS296\CS296Final\StephenKingFanSite\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
