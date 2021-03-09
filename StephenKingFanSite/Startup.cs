@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
 using StephenKingFanSite.Models;
 using StephenKingFanSite.Repos;
+using System;
+using System.Net.Http;
 
 namespace StephenKingFanSite
 {
@@ -49,7 +53,16 @@ namespace StephenKingFanSite
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                OnPrepareResponse = (context) =>
+                {
+                    // Disable caching for all static files.
+                    context.Context.Response.Headers["Cache-Control"] = "no-cache, no-store";
+                    context.Context.Response.Headers["Pragma"] = "no-cache";
+                    context.Context.Response.Headers["Expires"] = "-1";
+                }
+            });
 
             app.UseRouting();
 
@@ -62,6 +75,42 @@ namespace StephenKingFanSite
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+                context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+                await next();
+            });
+
+            app.UseResponseCaching();
+            app.Use(async (context, next) =>
+            {
+                if (context.Request.Method.Equals(System.Net.Http.HttpMethod.Get))
+                {
+                    context.Response.GetTypedHeaders().CacheControl =
+                    new CacheControlHeaderValue()
+                    {
+                        Private = true,
+                        MaxAge = TimeSpan.FromSeconds(10),
+                        NoCache = true,
+                        NoStore = true,
+                        MustRevalidate = true
+
+                    };
+                    context.Response.Headers[HeaderNames.Vary] =
+                        new string[] { "Accept-Encoding" };
+                }
+                await next();
+            });
+            HttpResponseMessage response = new HttpResponseMessage();
+            response.Headers.Pragma.ParseAdd("no-cache");
+
+            CookieOptions cookie = new CookieOptions
+            {
+                Domain = "https://stephenkingfansite20201201231657.azurewebsites.net/",    
+                Path = "/"
+            };
 
             DBInitializer.CreateAdminUser(app.ApplicationServices).Wait();
             DBInitializer.CreateMemberUser(app.ApplicationServices).Wait();
